@@ -65,7 +65,7 @@ last(names, function(lastName){
 });
 // Do not edit the code above.
 
-//test
+
 
 ////////// PROBLEM 3 //////////
 
@@ -74,6 +74,10 @@ last(names, function(lastName){
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
+function multiply(num1,num2,cb){
+    var result=cb(num1 * num2)
+    return result
+};
 //Code Here
 
 // Do not edit the code below.
@@ -93,7 +97,16 @@ multiply(4, 3, function(answer){
   If the name does not exist, invoke the callback with false as the argument.
 */
 
+//step1: check if name exists in arr
+//step2: if yes, invoke callback with true
+//step3: if no, invoke callback with false
+
 //Code Here 
+function contains(arr, name, cb){
+  if(arr.includes(name)){cb(true)}
+  else {cb(false)}
+}
+
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -115,6 +128,11 @@ contains(names, 'Colt', function(result){
 */
 
 //Code Here
+function uniq(arr,cb){
+  var uniqarr=[];
+  
+}
+
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -131,6 +149,12 @@ uniq(names, function(uniqArr){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
+function each(arr, cb){
+  for (var i=0;i<arr.length;i++){
+    cb(arr[i],i);
+    
+  }
+}
 //Code Here 
 
 // Do not edit the code below.
