@@ -173,6 +173,12 @@ each(names, function(item, indice){
 */
 
 // Code here
+function getUserById(users, idSearch, cb){
+    for(var i=0; i<users.length; i++){
+      if(users[i].id=idSearch){cb(users)
+      }
+    }
+};
 
 // Do not edit the code below.
 var users = [
